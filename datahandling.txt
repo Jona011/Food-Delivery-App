@@ -1,0 +1,42 @@
+// Simulate fetching user data from local storage
+function loadProfile() {
+    const userProfile = JSON.parse(localStorage.getItem('userProfile')) || {
+        name: '',
+        email: '',
+        address: '',
+        phone: ''
+    };
+
+    document.getElementById('name').value = userProfile.name;
+    document.getElementById('email').value = userProfile.email;
+    document.getElementById('address').value = userProfile.address;
+    document.getElementById('phone').value = userProfile.phone;
+}
+
+// Function to save profile data
+function saveProfile() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+
+    const userProfile = {
+        name,
+        email,
+        address,
+        phone
+    };
+
+    // Save user data to local storage
+    localStorage.setItem('userProfile', JSON.stringify(userProfile));
+
+    alert('Profile saved successfully!');
+    console.log('Profile Data:', userProfile);
+}
+
+// Function to log out
+function logOut() {
+    alert('Logged out successfully!');
+    // Redirect to home page
+    window.location.href = 'index.html';
+}

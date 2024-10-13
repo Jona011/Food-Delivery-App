@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8e1; /* Light yellow background */
+    color: #333;
+}
+
+header {
+    background-color: #ff1744; /* Red background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#introduction, #user-selection, #profile-info, #menu-items, #cart-items, #payment-info {
+    background-color: #ffeb3b; /* Yellow background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+#user-selection button, #cart-items button, #payment-info button, form button {
+    background-color: #ff1744; /* Red background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#user-selection button:hover, #cart-items button:hover, #payment-info button:hover, form button:hover {
+    background-color: #d50000; /* Darker red for hover effect */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    margin: 0 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+}
+
+button::before {
+    content: "🍔"; /* Burger emoji before buttons */
+    margin-right: 5px;
+}

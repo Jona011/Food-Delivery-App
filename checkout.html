@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Go Delivery - Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="menu.html">Menu 🍔</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <section id="checkout-items">
+            <h2>Review Your Order</h2>
+            <div id="selected-items"></div>
+            <div id="total-amount">
+                <strong>Total: $<span id="checkout-total">0.00</span></strong>
+            </div>
+            <button type="button" onclick="placeOrder()">Place Order</button>
+        </section>
+    </main>
+</body>
+</html>

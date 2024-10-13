@@ -1,0 +1,59 @@
+// Function to calculate total on menu page
+function calculateTotal() {
+    const checkboxes = document.querySelectorAll('input[name="item"]:checked');
+    let total = 0;
+    checkboxes.forEach((checkbox) => {
+        total += parseFloat(checkbox.value);
+    });
+    document.getElementById('total').textContent = total.toFixed(2);
+}
+
+// Function to get selected items and their total from menu page
+function getSelectedItems() {
+    const checkboxes = document.querySelectorAll('input[name="item"]:checked');
+    const selectedItems = [];
+    checkboxes.forEach((checkbox) => {
+        selectedItems.push({
+            name: checkbox.getAttribute('data-item'),
+            price: parseFloat(checkbox.value)
+        });
+    });
+    return selectedItems;
+}
+
+// Function to display selected items on checkout page
+function displayCheckoutItems() {
+    const selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+    const selectedItemsDiv = document.getElementById('selected-items');
+    let total = 0;
+
+    selectedItems.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        selectedItemsDiv.appendChild(itemDiv);
+        total += item.price;
+    });
+
+    document.getElementById('checkout-total').textContent = total.toFixed(2);
+}
+
+// Function to store selected items and navigate to checkout page
+function proceedToCheckout() {
+    const selectedItems = getSelectedItems();
+    localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+    window.location.href = 'checkout.html';
+}
+
+// Function to place order (for demonstration purposes)
+function placeOrder() {
+    alert('Order placed successfully!');
+    localStorage.removeItem('selectedItems');
+    window.location.href = 'index.html';
+}
+
+// Load selected items on checkout page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', displayCheckoutItems);
+} else {
+    displayCheckoutItems();
+}
