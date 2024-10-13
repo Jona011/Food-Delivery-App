@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Go Delivery - Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Menu</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="menu.html">Menu 🍔</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <section id="menu-items">
+            <h2>Our Delicious Offerings</h2>
+            <form id="menu-form">
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="5.99" data-name="Classic Burger">
+                            🍔 Classic Burger - $5.99
+                            <p>Ingredients: Beef patty, lettuce, tomato, cheese, pickles, onions, ketchup, mustard.</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="7.99" data-name="Double Cheeseburger">
+                            🍔 Double Cheeseburger - $7.99
+                            <p>Ingredients: Two beef patties, double cheese, lettuce, tomato, pickles, onions, ketchup, mustard.</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="12.99" data-name="Fried Chicken Bucket">
+                            🍗 Fried Chicken Bucket (8 pcs) - $12.99
+                            <p>Ingredients: 8 pieces of crispy fried chicken, secret spices.</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="10.99" data-name="Pepperoni Pizza">
+                            🍕 Pepperoni Pizza - $10.99
+                            <p>Ingredients: Pepperoni, mozzarella cheese, tomato sauce, oregano.</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="14.99" data-name="Sushi Platter">
+                            🍣 Sushi Platter - $14.99
+                            <p>Ingredients: Assorted sushi rolls with salmon, tuna, avocado, cucumber, rice, seaweed.</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="6.99" data-name="Caesar Salad">
+                            🥗 Caesar Salad - $6.99
+                            <p>Ingredients: Romaine lettuce, Caesar dressing, croutons, parmesan cheese.</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="8.99" data-name="Chicken Noodles">
+                            🍜 Chicken Noodles - $8.99
+                            <p>Ingredients: Noodles, grilled chicken, mixed vegetables, soy sauce.</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="3.99" data-name="Vanilla Ice Cream">
+                            🍦 Vanilla Ice Cream - $3.99
+                            <p>Ingredients: Vanilla ice cream, whipped cream, cherry.</p>
+                        </label>
+                    </li>
+                </ul>
+                <h3>Total: $<span id="total">0.00</span></h3>
+                <button type="submit">Add to Cart</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

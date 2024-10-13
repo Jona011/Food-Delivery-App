@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Go Delivery - Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Menu</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="menu.html">Menu 🍔</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <section id="menu-items">
+            <h2>Our Delicious Offerings</h2>
+            <form id="menuForm">
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="5.99" data-item="Classic Burger">
+                            🍔 Classic Burger - $5.99
+                        </label>
+                        <p>Ingredients: Beef patty, lettuce, tomato, cheese, pickles, onions, ketchup, mustard.</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="7.99" data-item="Double Cheeseburger">
+                            🍔 Double Cheeseburger - $7.99
+                        </label>
+                        <p>Ingredients: Two beef patties, double cheese, lettuce, tomato, pickles, onions, ketchup, mustard.</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="12.99" data-item="Fried Chicken Bucket">
+                            🍗 Fried Chicken Bucket (8 pcs) - $12.99
+                        </label>
+                        <p>Ingredients: 8 pieces of crispy fried chicken, secret spices.</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="10.99" data-item="Pepperoni Pizza">
+                            🍕 Pepperoni Pizza - $10.99
+                        </label>
+                        <p>Ingredients: Pepperoni, mozzarella cheese, tomato sauce, oregano.</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="14.99" data-item="Sushi Platter">
+                            🍣 Sushi Platter - $14.99
+                        </label>
+                        <p>Ingredients: Assorted sushi rolls with salmon, tuna, avocado, cucumber, rice, seaweed.</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="6.99" data-item="Caesar Salad">
+                            🥗 Caesar Salad - $6.99
+                        </label>
+                        <p>Ingredients: Romaine lettuce, Caesar dressing, croutons, parmesan cheese.</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="8.99" data-item="Chicken Noodles">
+                            🍜 Chicken Noodles - $8.99
+                        </label>
+                        <p>Ingredients: Noodles, grilled chicken, mixed vegetables, soy sauce.</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="item" value="3.99" data-item="Vanilla Ice Cream">
+                            🍦 Vanilla Ice Cream - $3.99
+                        </label>
+                        <p>Ingredients: Vanilla ice cream, whipped cream, cherry.</p>
+                    </li>
+                </ul>
+                <div id="totalAmount">
+                    <strong>Total: $<span id="total">0.00</span></strong>
+                </div>
+                <button type="button" onclick="calculateTotal()">Calculate Total</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
